@@ -1,0 +1,258 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{fontawesome}
+\usepackage[margin=3cm]{geometry}
+
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\rfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item[]\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{\href{https://github.com/jeyaramashok}{\Large Jeyaram Ashokraj}} & Email : \href{mailto:a.jeyaram@gmail.com}{a.jeyaram@gmail.com}\\
+\end{tabular*}
+
+%-----------SUMMARY-----------------
+\section{Summary}
+
+I am a software engineer at IBM where I build cloud native applications and help product teams to adopt best practices for developing production grade applications.
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{IBM}{Rochester, MN, USA}
+{Software Engineer}{Oct 2015 - Present}
+\resumeItemListStart
+\resumeItem{CloudPak Engineering}
+{
+    \begin{itemize}[leftmargin=*]
+        \item Responsible for helping and guiding product teams to pass internal IBM certification for developing applications on Kubernetes/Openshift.
+        \item Developed kubernetes operator for redis database and service broker (implementing OSB API).
+        \item Responsible for maintaining inner source components.
+        \item Developed certification checklist containing security best practices and patterns that IBM products must adhere to when developing production grade applications on Openshift/Kubernetes.
+        \item Responsible for helping and guiding product teams to implement those best practices and patterns.
+        \item Developed solutions for disconnected installs of cloudpak products.
+        \item Developed internal tools (CLI) to improve the developer experience for packaging and delivering products.
+        \item Helped onboarding ISV and opensource helm charts into IBM catalog by addressing security gaps and hardening things to help them meet IBM standards for Kubernetes software.
+        \item Contributed to opensource projects like operator-sdk, operator-lifecycle-manager.
+    \end{itemize}
+}
+\resumeItem{Watson Natural Language Understanding}
+{
+    \begin{itemize}[leftmargin=*]
+        \item An API as a service platform for natural language understanding tasks.
+        \item Responsible for engineering, implementation, monitoring, and maintenance of the service.
+        \item Integrated sentiment service with existing stack (implemented in Typescript).
+        \item Refactored keywords microservice.
+        \item Developed helm charts to deploy the product in IBM Private cloud.
+        \item Created scripts to automate migration of standalone databases to IBM Cloud Database instances.
+    \end{itemize}
+}
+
+\resumeItem{Analytics Engine}
+{
+    \begin{itemize}[leftmargin=*]
+        \item A IaaS compute platform running Apache Hadoop and Spark.
+        \item Worked on CLI component to interact with the cluster, launch spark jobs and retreive logs.
+        \item Implemented the webHDFS REST api as file system commands in the CLI.
+    \end{itemize}
+}
+
+\resumeItem{BigInsights on Cloud}
+{
+    \begin{itemize}[leftmargin=*]
+        \item A big data platform running Apache Hadoop on VM's and Baremetal machines.
+        \item Developed Chef recipes to scale clusters by adding nodes, backup and restore.
+        \item Parallelized delivery of security fixes to clusters.
+        \item Worked on making the service GDPR complaint by adding Vault support and encrypting disks.
+        \item Encryption was challenging task due to large size of disks ( 4 TB X 8 disk X 5-8 nodes) and will take weeks to complete. A typical encryption is done backing up data to temp disk storage and then encrypting it, but instead I proposed to use Hadoop’s self-healing and rack-awareness to handle data loss during encryption which saved a lot of time.
+    \end{itemize}
+}
+
+\resumeItem{Spark as a Service}
+{
+    \begin{itemize}[leftmargin=*]
+        \item A multi-tenant platform for running notebooks and batch jobs with Apache Spark, running on top IBM Spectrum and Apache Mesos.
+        \item Reponsible for engineering, implementation, monitoring, and maintenance of the service.
+        \item Created a containerized integration test framework using Cucumber for the CICD pipeline.
+        \item Improved the platform security by fixing vulnerabilities identified from external penetration testing.
+    \end{itemize}
+}
+
+\resumeItem{Analytics NextGen Workbench}
+{
+    \begin{itemize}[leftmargin=*]
+        \item A platform for data scientists to design and develop predictive models and execute with SPSS backend.
+        \item I was responsible for developing a scheduler microservice using Akka/Scala for the platform.
+    \end{itemize}
+}
+
+\resumeItemListEnd
+
+\newpage
+
+\resumeSubheading
+{University of South Florida}{Tampa, FL, US}
+{Research and Teaching Assistant}{Aug 2014 - May 2015}
+\resumeItemListStart
+\resumeItem{Research Assistant}
+{
+    \begin{itemize}[leftmargin=*]
+        \item Analyzed customer software subscriptions data provided by Wharton customer analytics initiative (wcai) research group.
+        \item Involved in cleaning and preparation of data set, feature extraction, data visualization and identifying research questions.
+    \end{itemize}
+}
+\resumeItem{Teaching Assistant}
+{
+    \begin{itemize}[leftmargin=*]
+        \item TA for two graduate level courses: Distributed Information Systems course (ISM 6225) and Information Security and
+              Risk Management course (ISM 6328)
+    \end{itemize}
+}
+\resumeItem{Software Developer}
+{
+    \begin{itemize}[leftmargin=*]
+        \item Developed responsive web pages for college of global sustainability using Bootstrap, HTML5, CSS3 and JavaScript.
+    \end{itemize}
+}
+
+\resumeItemListEnd
+
+\resumeSubheading
+{Cognizant}{Chennai, TN, IN}
+{Software Engineer}{Aug 2008 - Nov 2013}
+\resumeItemListStart
+\resumeItem{Performance Engineering}
+{
+    \begin{itemize}[leftmargin=*]
+        \item Performed JVM profiling and heap dump analysis, to identify potential memory leaks and slow running code.
+        \item Tuned JVM’s and recommended GC policies appropriate for the application, which improved the scalability and reduced memory footprint.
+        \item Developed RESTful web services, providing in-house performance engineering tools as SAAS services for internal development teams.
+    \end{itemize}
+}
+
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{University of South Florida}{Tampa, FL, US}
+{Master of Science in Management Information Systems;  GPA: 3.94/4.0}{Jan. 2014 -- May. 2015}
+\resumeSubheading
+{Madras Institute of Technology}{Chennai, TN, IN}
+{Bachelor of Engineering in Computer Science;  GPA: 6.8/10.0}{Aug. 2004 -- July. 2008}
+\resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+\resumeSubHeadingListStart
+\resumeSubItem{Languages}
+{Go, Python, TypeScript, Scala, Java, C++}
+\resumeSubItem{Frameworks}
+{Node, Akka}
+\resumeSubItem{Cloud Platforms}
+{Kubernetes, RedHat OpenShift, IBM Cloud}
+\resumeSubItem{Infrastructure}
+{Chef, Ansible}
+\resumeSubItem{Databases}
+{RDBMS (PostgreSQL, MySQL), NoSQL (Redis, MongoDB)}
+\resumeSubItem{ML}
+{R, Tensorflow}
+\resumeSubItem{Others}
+{Containers, Git}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Academic Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{ICC Cricket Worldcup 2015 predictions}
+{Collected and prepared match results data from espncricinfo.com.
+    Built logistic regression models to estimate the probability of winning and evaluated against previous world cup.}
+\resumeSubItem{Recommender Systems}
+{Mentored by Dr.Balaji Padmanabhan, PhD. Investigated the problem of existing recommender algorithms used in businesses with hierarchical domains.
+    Studied recommendation algorithms such as Probabilistic Inferences, SVD, CF and content filtering.}
+\resumeSubItem{Predictive Models for P2P lending}
+{Cleaned and analyzed a large XML (3.5 GB) data provided by peer-to-peer lending platform (www.prosper.com).
+    Built predictive models for loans approval/rejections, loans default and risk calculation, and borrowers rating classification.}
+\resumeSubItem{Digital Image Processing toolkit}
+{Implemented image processing algorithms like Scaling, Edge detection, Fourier transforms and Hough Transforms in C++ (without built-in libraries like OpenCV)}
+\resumeSubItem{Character Recognition toolkit}
+{Implemented a classifier (minimum distance, Bayes moments and Nearest neighbor) for MNIST digit dataset using the central moments and covariance for each class as features.}
+\resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
