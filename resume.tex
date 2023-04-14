@@ -83,7 +83,7 @@
 %-----------SUMMARY-----------------
 \section{Summary}
 
-I am a software engineer at IBM where I build cloud native applications and help product teams to adopt best practices for developing production grade applications.
+I am a software engineer at IBM where I build kubernetes operators and developer tools.
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
@@ -96,13 +96,13 @@ I am a software engineer at IBM where I build cloud native applications and help
 \resumeItem{CloudPak Engineering}
 {
     \begin{itemize}[leftmargin=*]
-        \item Responsible for making IBM CloudPaks work consistently in RedHat OpenShift (RHOCP) in hybrid cloud.
-        \item Developed Kubernetes controller for Redis database, which was used as shared dependency across IBM CloudPaks.
+        \item Responsible for certification and delivery of IBM CloudPaks on RedHat OpenShift (RHOCP).
+        \item Developed Kubernetes controller for Redis database, used as shared dependency across IBM CloudPaks.
         \item Developed general-purpose service broker operator for kubernetes (using OSB API).
         \item Developed solution and tooling for disconnected installs of IBM CloudPak on Openshift clusters.
-        \item Developed internal tools (CLI) to improve the developer experience for packaging and delivering products.
-        \item Implemented code signing and image signing for IBM CloudPak content pipeline, to ensure the integrity and avoid supply chain attacks.
-        \item Helped develop certification service containing security best practices and patterns that IBM products must adhere to when developing production grade applications on Kubernetes.
+        \item Developed internal developer tools (CLI) for packaging and delivering IBM CloudPaks.
+        \item Implemented code \& image signing for our pipeline, to ensure integrity and avoid supply chain attacks.
+        \item Helped develop certification framework containing security best practices and patterns that IBM products must follow when developing production grade applications on Kubernetes.
         \item Helped onboard ISV and opensource helm charts into IBM catalog by addressing security gaps and hardening things to help them meet IBM standards for Kubernetes software.
         \item Responsible for maintaining inner source components.
         \item Participated and contributed in external open source communities like operator-sdk, operator-lifecycle-manager.
@@ -123,7 +123,7 @@ I am a software engineer at IBM where I build cloud native applications and help
 {
     \begin{itemize}[leftmargin=*]
         \item A IaaS compute platform running Apache Hadoop and Spark.
-        \item Worked on CLI component to interact with the cluster, launch spark jobs and retrieve logs.
+        \item Developed CLI tool to interact with the cluster, launch spark jobs and retrieve logs.
         \item Implemented the webHDFS REST api as file system commands in the CLI.
     \end{itemize}
 }
@@ -133,8 +133,8 @@ I am a software engineer at IBM where I build cloud native applications and help
     \begin{itemize}[leftmargin=*]
         \item A big data platform running Apache Hadoop on VM's and baremetal machines.
         \item Developed Chef recipes to scale clusters by adding nodes, backup and restore.
-        \item Parallelized delivery of security fixes to clusters.
-        \item Worked on making the service GDPR complaint by adding Vault support and encrypting disks.
+        \item Implemented parallel delivery of security fixes to clusters.
+        \item Responsible for enabling GDPR complaince, by adding Vault support and encrypting disks.
         \item Encryption was challenging task due to large size of disks ( 4 TB X 8 disk X 5-8 nodes). It's typically done by backing up data to temp disk storage and then encrypting it, but instead I proposed to use Hadoop’s self-healing and rack-awareness to handle data loss during encryption which cut down time from weeks to days.
     \end{itemize}
 }
@@ -153,7 +153,7 @@ I am a software engineer at IBM where I build cloud native applications and help
 {
     \begin{itemize}[leftmargin=*]
         \item A platform for data scientists to design and develop predictive models and execute with SPSS backend.
-        \item I was responsible for developing a scheduler microservice using Akka/Scala for the platform.
+        \item Responsible for developing a scheduler microservice using Akka/Scala for the platform.
     \end{itemize}
 }
 
@@ -194,7 +194,7 @@ I am a software engineer at IBM where I build cloud native applications and help
 \resumeItem{Performance Engineering}
 {
     \begin{itemize}[leftmargin=*]
-        \item Performed JVM profiling and heap dump analysis, to identify potential memory leaks and slow running code.
+        \item Responsible for profiling JVM and heap dump analysis, to identify potential memory leaks and slow running code.
         \item Tuned JVM’s and recommended GC policies appropriate for the application, which improved the scalability and reduced memory footprint.
         \item Developed RESTful web services, providing in-house performance engineering tools as SAAS services for internal development teams.
     \end{itemize}
