@@ -83,25 +83,26 @@
 %-----------SUMMARY-----------------
 \section{Summary}
 
-I am a software engineer at IBM where I build kubernetes operators and developer tools.
+I am a software engineer at IBM where I build cloud native applications, kubernetes operators and developer tools.
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{IBM}{Rochester, MN, USA}
+{IBM}{San Jose, CA, USA}
 {Software Engineer}{Oct 2015 - Present}
 \resumeItemListStart
 \resumeItem{CloudPak Engineering}
 {
     \begin{itemize}[leftmargin=*]
-        \item Responsible for certification and delivery of IBM CloudPaks on RedHat OpenShift (RHOCP).
-        \item Developed Kubernetes controller for Redis database, used as shared dependency across IBM CloudPaks.
+        \item Developed Kubernetes controller (using Go) for Redis database, used as shared dependency across IBM CloudPaks.
         \item Developed general-purpose service broker operator for kubernetes (using OSB API).
         \item Developed solution and tooling for disconnected installs of IBM CloudPak on Openshift clusters.
-        \item Developed internal developer tools (CLI) for packaging and delivering IBM CloudPaks.
-        \item Implemented code \& image signing for our pipeline, to ensure integrity and avoid supply chain attacks.
+        \item Developed internal developer tools (CLI implemented in Go) for packaging and delivering IBM CloudPaks.
+        \item Developed certification framework for delivery of IBM CloudPaks on RedHat OpenShift (RHOCP).
+        \item Implemented CICD pipeline using gitops principles, that helped to reduce manual process and promotion time.
+        \item Implemented code \& image signing for CICD pipeline, to ensure integrity and avoid supply chain attacks.
         \item Helped develop certification framework containing security best practices and patterns that IBM products must follow when developing production grade applications on Kubernetes.
         \item Helped onboard ISV and opensource helm charts into IBM catalog by addressing security gaps and hardening things to help them meet IBM standards for Kubernetes software.
         \item Responsible for maintaining inner source components.
@@ -113,7 +114,7 @@ I am a software engineer at IBM where I build kubernetes operators and developer
     \begin{itemize}[leftmargin=*]
         \item An API as a service platform for natural language understanding tasks.
         \item Responsible for engineering, implementation, monitoring, and maintenance of the service.
-        \item Integrated sentiment service with existing stack (implemented in Typescript).
+        \item Integrated sentiment service with existing stack (Typescript).
         \item Developed helm charts to deploy the product in IBM Private cloud.
         \item Created scripts to automate migration of standalone databases to IBM Cloud Database instances.
     \end{itemize}
@@ -124,7 +125,7 @@ I am a software engineer at IBM where I build kubernetes operators and developer
     \begin{itemize}[leftmargin=*]
         \item A IaaS compute platform running Apache Hadoop and Spark.
         \item Developed CLI tool to interact with the cluster, launch spark jobs and retrieve logs.
-        \item Implemented the webHDFS REST api as file system commands in the CLI.
+        \item Implemented the webHDFS REST api as file system commands in the CLI (Go).
     \end{itemize}
 }
 
